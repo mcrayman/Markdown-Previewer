@@ -53,7 +53,7 @@ function App() {
   **This text is bold.**`);
 
   return (
-    <div className="d-flex row justify-content-center text-center" style={{ backgroundColor: '#d9b18e' }}>
+    <div className="d-flex row justify-content-center text-left" style={{ backgroundColor: '#d9b18e' }}>
 
       <textarea className="" id="editor" style={{ width: '50vw', height: '10rem', backgroundColor: "#f6eee3", margin: '1rem'}} onChange={(event) => {
         setText(event.target.value)
@@ -63,7 +63,8 @@ function App() {
         ** Hello'
       ></textarea>
 
-      <div className="" id="preview" style={{ width: '60vw', backgroundColor: '#f6eee3' }}
+      <div className="" id="preview" 
+      style={{ width: '60vw', backgroundColor: '#f6eee3' }}
       dangerouslySetInnerHTML={{
         __html: marked(text),
       }}></div>
